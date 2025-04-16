@@ -17,17 +17,17 @@ export function RotatingTagline() {
   }, [])
 
   return (
-    <h2 className="text-2xl md:text-4xl font-medium">
+    <h2 className="text-3xl md:text-4xl font-medium">
       Making Ageing{" "}
-      <span className="inline-block relative h-[1.5em] w-[5rem] md:w-[6rem]">
+      <span className="inline-block relative h-[0.95em] w-[5rem] md:w-[7rem]">
         <AnimatePresence mode="wait">
           <motion.span
             key={currentIndex}
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
+            initial={{ y: 10, opacity: 0 }}
+            animate={{ y: 2, opacity: 1 }}
             exit={{ y: -20, opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className="absolute left-0"
+            className="absolute left-0 font-bold bg-gradient-to-r from-blue-500 via-purple-400 to-orange-500 text-transparent bg-clip-text"
           >
             {taglines[currentIndex]}
           </motion.span>
