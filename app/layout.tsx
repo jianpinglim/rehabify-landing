@@ -8,7 +8,13 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata = {
   title: "Rehabify - Making Ageing Fun",
   description: "A playful and active approach to rehabilitation for seniors",
-    generator: 'v0.dev'
+  generator: 'v0.dev',
+  icons: {
+    // Use your custom icon for all purposes
+    icon: [
+      { url: '/images/iconThumbnail2.png' }
+    ],
+  }
 }
 
 export default function RootLayout({
@@ -31,6 +37,3 @@ export default function RootLayout({
     </html>
   )
 }
-
-
-import './globals.css'

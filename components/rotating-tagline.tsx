@@ -17,7 +17,7 @@ export function RotatingTagline() {
   }, [])
 
   return (
-    <h2 className="text-3xl md:text-4xl font-medium">
+    <h2 className="text-3xl md:text-4xl font-bold">
       Making Ageing{" "}
       <span className="inline-block relative h-[0.95em] w-[5rem] md:w-[7rem]">
         <AnimatePresence mode="wait">
