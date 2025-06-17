@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 import { RotatingTagline } from "@/components/rotating-tagline"
 import { FooterRotate } from "@/components/footerRotate"
 import Image from "next/image"
-import { Mail, Linkedin } from 'lucide-react'; // Import icons
+import { Mail, Linkedin, Video } from 'lucide-react'; // Import icons
 import Link from "next/link"
 
 export default function Home() {
@@ -73,13 +73,18 @@ export default function Home() {
       <div className="grid md:grid-cols-2 gap-12 items-center mb-24 ml-12">
         <div className="order-2 md:order-1 rounded-xl overflow-hidden shadow-lg">
           <div className="aspect-[4/3] bg-gray-100 flex items-center justify-center">
-            <Image
-              src="/images/PlayTogether.jpg"
-              alt="People exercising together"
-              width={600}
-              height={400}
+            {/* Replace Video component with video element */}
+            <video
               className="w-full h-full object-cover"
-            />
+              controls
+              autoPlay
+              muted
+              loop
+            >
+              {/* Fix the src attribute - remove the extra text */}
+              <source src="/videos/playtogether.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
         <div className="order-1 md:order-2">
