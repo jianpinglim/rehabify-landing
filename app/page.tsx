@@ -24,16 +24,159 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Moved video section up by adding negative margin-top */}
-      <div className="container mx-auto px-4 py-12 -mt-32 relative z-"> {/* Ensure this section overlaps correctly */}
-        {/* Video Section */}
+      {/* Moved cards section up by adding negative margin-top */}
+      <div className="container mx-auto px-4 py-12 -mt-32 relative z-10">
+        {/* Cards Section */}
         <div className="mb-20">
-          <div className="rounded-xl overflow-hidden aspect-video flex items-center justify-center mb-4 max-w-6xl mx-auto">
-            <video className="w-full h-full object-cover" controls autoPlay muted loop>
-              <source src="/videos/RehabifyPlay4.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+          {/* Desktop: 5 cards in a row, Mobile: 3 top, 2 bottom */}
+          <div className="hidden md:flex justify-center items-center gap-0 mb-8 max-w-6xl mx-auto">
+            {/* Desktop layout - all 5 cards in a row */}
+            {/* Card 1 - slight left tilt */}
+            <div className="w-80 h-80 bg-white rounded-xl shadow-lg border-4 border-black
+             overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10 relative -mr-2 transform -rotate-3">
+              <div className="w-full h-full bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
+                <Image
+                  src="/images/thumbnails5/soloElderly.jpg"
+                  alt="Feature 1"
+                  width={256}
+                  height={192}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Card 2 - slight right tilt */}
+            <div className="w-80 h-80 bg-white rounded-xl shadow-lg border-4 border-black overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10 relative -mr-2 transform rotate-2">
+              <div className="w-full h-full bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
+                <Image
+                  src="/images/thumbnails5/duouncle.jpeg"
+                  alt="Feature 2"
+                  width={256}
+                  height={192}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Card 3 - slight left tilt */}
+            <div className="w-80 h-80 bg-white rounded-xl shadow-lg border-4 border-black overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10 relative -mr-2 transform -rotate-2">
+              <div className="w-full h-full bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center">
+                <video
+                  className="w-full h-full object-cover scale-150"
+                  autoPlay
+                  loop
+                  muted
+                >
+                  <source src="/images/thumbnails5/auntieplaying.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+
+            {/* Card 4 - slight right tilt */}
+            <div className="w-80 h-80 bg-white rounded-xl shadow-lg border-4 border-black overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10 relative -mr-2 transform rotate-3">
+              <div className="w-full h-full bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center">
+                <Image
+                  src="/images/thumbnails5/slimegameauntie.jpeg"
+                  alt="Feature 4"
+                  width={256}
+                  height={192}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Card 5 - slight left tilt */}
+            <div className="w-80 h-80 bg-white rounded-xl shadow-lg overflow-hidden border-4 border-black hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10 relative transform -rotate-4">
+              <div className="w-full h-full bg-gradient-to-br from-pink-100 to-pink-200 flex items-center justify-center">
+                <Image
+                  src="/images/thumbnails5/soloElderly2.jpg"
+                  alt="Feature 5"
+                  width={256}
+                  height={192}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
           </div>
+
+          {/* Mobile layout - 3 top, 2 bottom */}
+          <div className="md:hidden mb-8 max-w-sm mx-auto">
+            {/* Top row - 3 cards */}
+            <div className="flex justify-center items-center gap-0 mb-4">
+              {/* Card 1 */}
+              <div className="w-32 h-32 bg-white rounded-lg shadow-lg border-2 border-black overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10 relative -mr-2 transform -rotate-3">
+                <div className="w-full h-full bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
+                  <Image
+                    src="/images/thumbnails5/soloElderly.jpg"
+                    alt="Feature 1"
+                    width={96}
+                    height={96}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* Card 2 */}
+              <div className="w-32 h-32 bg-white rounded-lg shadow-lg border-2 border-black overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10 relative -mr-2 transform rotate-2">
+                <div className="w-full h-full bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
+                  <video
+                    className="w-full h-full object-cover scale-x-150"
+                    autoPlay
+                    loop
+                    muted
+                  >
+                    <source src="/images/thumbnails5/auntieplaying.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+
+                </div>
+              </div>
+
+              {/* Card 3 */}
+              <div className="w-32 h-32 bg-white rounded-lg shadow-lg border-2 border-black overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10 relative transform -rotate-2">
+                <div className="w-full h-full bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center">
+                  <Image
+                    src="/images/thumbnails5/duouncle.jpeg"
+                    alt="Feature 2"
+                    width={96}
+                    height={96}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Bottom row - 2 cards */}
+            <div className="flex justify-center items-center gap-0">
+              {/* Card 4 */}
+              <div className="w-32 h-32 bg-white rounded-lg shadow-lg border-2 border-black overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10 relative -mr-2 transform rotate-3">
+                <div className="w-full h-full bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center">
+                  <Image
+                    src="/images/thumbnails5/slimegameauntie.jpeg"
+                    alt="Feature 4"
+                    width={96}
+                    height={96}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* Card 5 */}
+              <div className="w-32 h-32 bg-white rounded-lg shadow-lg border-2 border-black overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10 relative transform -rotate-4">
+                <div className="w-full h-full bg-gradient-to-br from-pink-100 to-pink-200 flex items-center justify-center">
+                  <Image
+                    src="/images/thumbnails5/soloElderly2.jpg"
+                    alt="Feature 5"
+                    width={96}
+                    height={96}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* 
           <div className="flex justify-center gap-4 mt-6">
             <a
               href="https://jianpinglim.itch.io/rehabify-play"
@@ -43,11 +186,9 @@ export default function Home() {
             >
               <Button className="px-8 text-lg font-semibold">Download</Button>
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
-
-
       {/* Start Moving Section */}
       <div className="grid md:grid-cols-2 gap-12 items-center mb-24 ml-12">
 
@@ -62,7 +203,7 @@ export default function Home() {
         <div className="rounded-xl shadow-lg mr-12">
           <div className="rounded-xl overflow-hidden flex items-center justify-center">
             <video className="w-full h-full object-cover" controls autoPlay muted loop>
-              <source src="/videos/StartMoving.mp4" type="video/mp4" />
+              <source src="/videos/uncletaichi.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
