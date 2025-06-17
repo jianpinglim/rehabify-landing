@@ -12,7 +12,7 @@ export const metadata = {
   icons: {
     // Use your custom icon for all purposes
     icon: [
-      { url: '/images/rehabifyicon.ico' }
+      { url: '/images/rehabifyicon2.png' }
     ],
   }
 }

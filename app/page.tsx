@@ -105,7 +105,7 @@ export default function Home() {
         <div className="rounded-xl overflow-hidden shadow-lg mr-12">
           <div className="aspect-[4/3] bg-gray-100 flex items-center justify-center">
             <Image
-              src="/images/playAnywhere.jpeg"
+              src="/images/playAnywhere.jpg"
               alt="Person exercising"
               width={600}
               height={400}
