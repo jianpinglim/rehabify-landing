@@ -285,7 +285,7 @@ export default function Home() {
       <div className="bg-[#f0f5ff] py-16 mb-0">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Let's Get Your Seniors Moving!
+            Let's Get Our Seniors Moving!
           </h2>
           <p className="text-gray-600 text-xl max-w-3xl mx-auto mb-8">
             We offer game sessions for seniors to experience a new way of moving, powered by motion-tracking technology.
@@ -338,7 +338,7 @@ export default function Home() {
             <div className="text-center md:text-left">
               {/* Increased heading size */}
               <p className="font-semibold text-lg mb-2">About Rehabify</p>
-              <p>Making rehabilitation fun and accessible through interactive motion-based games. Leveraging machine learning and computer vision to make ageing more fun</p>
+              <p>Making rehabilitation fun and accessible through interactive motion-based games. Leveraging machine learning and computer vision to make ageing more fun.</p>
             </div>
           </div>
         </div>
