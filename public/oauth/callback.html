@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Authorization Complete</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-        .success { color: green; }
-        .error { color: red; }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .success {
+            color: green;
+        }
+
+        .error {
+            color: red;
+        }
     </style>
 </head>
+
 <body>
     <div id="content">
         <h2>Processing authorization...</h2>
@@ -24,34 +36,35 @@
         if (code) {
             // Success - launch your desktop app with the auth code
             document.getElementById('content').innerHTML = `
-                <h2 class="success">✓ Authorization Successful!</h2>
-                <p>Opening Rehabify...</p>
-                <p><small>If the app doesn't open automatically, please start it manually.</small></p>
-            `;
-            
-            // Try to launch your desktop app with custom protocol
-            window.location.href = `rehabify://auth-success?code=${code}&state=${state}`;
-            
+            <h2 class="success">✓ Authorization Successful!</h2>
+            <p>Opening Rehabify...</p>
+            <p><small>If the app doesn't open automatically, please start it manually.</small></p>
+        `;
+
+            // Try to launch your desktop app with custom protocol - FIXED FORMAT
+            window.location.href = `rehabify://callback?code=${code}`;
+
             // Fallback: Show instructions after 3 seconds
             setTimeout(() => {
                 document.getElementById('content').innerHTML += `
-                    <hr>
-                    <p>If Rehabify didn't open automatically:</p>
-                    <ol>
-                        <li>Open the Rehabify desktop application</li>
-                        <li>The login should complete automatically</li>
-                    </ol>
-                `;
+                <hr>
+                <p>If Rehabify didn't open automatically:</p>
+                <ol>
+                    <li>Open the Rehabify desktop application</li>
+                    <li>The login should complete automatically</li>
+                </ol>
+            `;
             }, 3000);
-            
+
         } else if (error) {
             // Error case
             document.getElementById('content').innerHTML = `
-                <h2 class="error">✗ Authorization Failed</h2>
-                <p>Error: ${error}</p>
-                <p>Please close this window and try again.</p>
-            `;
+            <h2 class="error">✗ Authorization Failed</h2>
+            <p>Error: ${error}</p>
+            <p>Please close this window and try again.</p>
+        `;
         }
     </script>
 </body>
+
 </html>
