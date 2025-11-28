@@ -10,13 +10,22 @@ export default function Home() {
     <main className="min-h-screen bg-white">
       {/* Reduced height of hero section and adjusted padding */}
       <div
-        className="h-[70vh] flex items-center justify-center bg-white pb-12 relative overflow-hidden" // Use bg-white or bg-gray-50 as base
+        className="h-[80vh] flex items-center justify-center bg-white pb-14 relative overflow-hidden" // Increased height to 80vh
         style={{
-          backgroundImage: 'radial-gradient(circle, #dce4f5 2px, transparent 1px)', // #e5e7eb is gray-200
-          backgroundSize: '40px 40px' // Adjust size for dot spacing
+          backgroundImage: 'radial-gradient(circle, #dce4f5 2px, transparent 1px)',
+          backgroundSize: '40px 40px'
         }}
       >
-        <div className="text-center px-4 max-w-4xl mx-auto -mt-16 relative z-10"> {/* Ensure content is above the background */}
+        <div className="text-center px-4 max-w-4xl mx-auto mt-8 relative z-10"> {/* Changed -mt-16 to mt-12 */}
+          <div className="flex justify-center mb-6">
+            <Image
+              src="/images/rehabifyicon2.png"
+              alt="Rehabify Logo"
+              width={120}
+              height={120}
+              className="object-contain"
+            />
+          </div>
           <h1 className="text-7xl md:text-7xl font-extrabold mb-4 tracking-tight">Play More. <span className="text-[#0015ff]">Move More.</span></h1>
           <div className="mt-8">
             <RotatingTagline />
@@ -24,104 +33,43 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Moved cards section up by adding negative margin-top */}
-      <div className="container mx-auto px-4 py-12 -mt-32 relative z-10">
-        {/* Cards Section */}
-        <div className="mb-20">
-          {/* Desktop: 5 cards in a row, Mobile: 3 top, 2 bottom */}
-          <div className="hidden md:flex justify-center items-center gap-0 mb-8 max-w-6xl mx-auto">
-            {/* Desktop layout - all 5 cards in a row */}
-            {/* Card 1 - slight left tilt */}
-            <div className="w-80 h-80 bg-white rounded-xl shadow-lg border-4 border-black
-             overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10 relative -mr-2 transform -rotate-3">
-              <div className="w-full h-full bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
-                <Image
-                  src="/images/thumbnails5/soloElderly.jpg"
-                  alt="Feature 1"
-                  width={256}
-                  height={192}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-
-            {/* Card 2 - slight right tilt */}
-            <div className="w-80 h-80 bg-white rounded-xl shadow-lg border-4 border-black overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10 relative -mr-2 transform rotate-2">
-              <div className="w-full h-full bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
-                <Image
-                  src="/images/thumbnails5/duouncle.jpeg"
-                  alt="Feature 2"
-                  width={256}
-                  height={192}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-
-            {/* Card 3 - slight left tilt */}
-            <div className="w-80 h-80 bg-white rounded-xl shadow-lg border-4 border-black overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10 relative -mr-2 transform -rotate-2">
-              <div className="w-full h-full bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center">
-                <video
-                  className="w-full h-full object-cover scale-150"
-                  autoPlay
-                  loop
-                  muted
-                >
-                  <source src="/images/thumbnails5/auntieplaying.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-            </div>
-
-            {/* Card 4 - slight right tilt */}
-            <div className="w-80 h-80 bg-white rounded-xl shadow-lg border-4 border-black overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10 relative -mr-2 transform rotate-3">
-              <div className="w-full h-full bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center">
-                <Image
-                  src="/images/thumbnails5/slimegameauntie.jpeg"
-                  alt="Feature 4"
-                  width={256}
-                  height={192}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-
-            {/* Card 5 - slight left tilt */}
-            <div className="w-80 h-80 bg-white rounded-xl shadow-lg overflow-hidden border-4 border-black hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10 relative transform -rotate-4">
-              <div className="w-full h-full bg-gradient-to-br from-pink-100 to-pink-200 flex items-center justify-center">
-                <Image
-                  src="/images/thumbnails5/soloElderly2.jpg"
-                  alt="Feature 5"
-                  width={256}
-                  height={192}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Mobile layout - 3 top, 2 bottom */}
-          <div className="md:hidden mb-8 max-w-sm mx-auto">
-            {/* Top row - 3 cards */}
-            <div className="flex justify-center items-center gap-0 mb-4">
+      {/* Cards Section */}
+      <div className="container mx-auto px-4 py-8 -mt-12 relative z-10 max-w-8xl">
+        <div className="mb-20 relative overflow-hidden rounded-xl py-8" style={{ maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 3%, rgb(0, 0, 0) 97%, rgba(0, 0, 0, 0) 100%)' }}>
+          <div className="flex animate-scroll-left hover:pause w-fit">
+            {/* First set of cards */}
+            <div className="flex shrink-0">
               {/* Card 1 */}
-              <div className="w-32 h-32 bg-white rounded-lg shadow-lg border-2 border-black overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10 relative -mr-2 transform -rotate-3">
+              <div className="w-80 h-96 bg-white rounded-xl shadow-lg border-4 border-black overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10 relative transform -rotate-3 ml-4">
                 <div className="w-full h-full bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
                   <Image
                     src="/images/thumbnails5/soloElderly.jpg"
                     alt="Feature 1"
-                    width={96}
-                    height={96}
+                    width={320}
+                    height={320}
                     className="w-full h-full object-cover"
                   />
                 </div>
               </div>
 
               {/* Card 2 */}
-              <div className="w-32 h-32 bg-white rounded-lg shadow-lg border-2 border-black overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10 relative -mr-2 transform rotate-2">
+              <div className="w-80 h-96 bg-white rounded-xl shadow-lg border-4 border-black overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10 relative transform rotate-2 -ml-4">
                 <div className="w-full h-full bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
+                  <Image
+                    src="/images/thumbnails5/duouncle.jpeg"
+                    alt="Feature 2"
+                    width={320}
+                    height={320}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* Card 3 */}
+              <div className="w-80 h-96 bg-white rounded-xl shadow-lg border-4 border-black overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10 relative transform -rotate-2 -ml-4">
+                <div className="w-full h-full bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center">
                   <video
-                    className="w-full h-full object-cover scale-x-150"
+                    className="w-full h-full object-cover scale-150"
                     autoPlay
                     loop
                     muted
@@ -129,66 +77,252 @@ export default function Home() {
                     <source src="/images/thumbnails5/auntieplaying.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
-
                 </div>
               </div>
 
-              {/* Card 3 */}
-              <div className="w-32 h-32 bg-white rounded-lg shadow-lg border-2 border-black overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10 relative transform -rotate-2">
-                <div className="w-full h-full bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center">
-                  <Image
-                    src="/images/thumbnails5/duouncle.jpeg"
-                    alt="Feature 2"
-                    width={96}
-                    height={96}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Bottom row - 2 cards */}
-            <div className="flex justify-center items-center gap-0">
               {/* Card 4 */}
-              <div className="w-32 h-32 bg-white rounded-lg shadow-lg border-2 border-black overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10 relative -mr-2 transform rotate-3">
+              <div className="w-80 h-96 bg-white rounded-xl shadow-lg border-4 border-black overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10 relative transform rotate-3 -ml-4">
                 <div className="w-full h-full bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center">
                   <Image
                     src="/images/thumbnails5/slimegameauntie.jpeg"
                     alt="Feature 4"
-                    width={96}
-                    height={96}
+                    width={320}
+                    height={320}
                     className="w-full h-full object-cover"
                   />
                 </div>
               </div>
 
               {/* Card 5 */}
-              <div className="w-32 h-32 bg-white rounded-lg shadow-lg border-2 border-black overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10 relative transform -rotate-4">
+              <div className="w-80 h-96 bg-white rounded-xl shadow-lg overflow-hidden border-4 border-black hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10 relative transform -rotate-4 -ml-4">
                 <div className="w-full h-full bg-gradient-to-br from-pink-100 to-pink-200 flex items-center justify-center">
                   <Image
                     src="/images/thumbnails5/soloElderly2.jpg"
                     alt="Feature 5"
-                    width={96}
-                    height={96}
+                    width={320}
+                    height={320}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* Card 6 */}
+              <div className="w-80 h-96 bg-white rounded-xl shadow-lg border-4 border-black overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10 relative transform rotate-1 -ml-4">
+                <div className="w-full h-full bg-gradient-to-br from-yellow-100 to-yellow-200 flex items-center justify-center">
+                  <Image
+                    src="/images/redcross_uncle.jpg"
+                    alt="Feature 6"
+                    width={320}
+                    height={320}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* Card 7 */}
+              <div className="w-80 h-96 bg-white rounded-xl shadow-lg border-4 border-black overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10 relative transform -rotate-1 -ml-4">
+                <div className="w-full h-full bg-gradient-to-br from-teal-100 to-teal-200 flex items-center justify-center">
+                  <Image
+                    src="/images/playAnywhere.jpg"
+                    alt="Feature 7"
+                    width={320}
+                    height={320}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Duplicate set for seamless loop */}
+            <div className="flex shrink-0">
+              {/* Card 1 */}
+              <div className="w-80 h-96 bg-white rounded-xl shadow-lg border-4 border-black overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10 relative transform -rotate-3 ml-4">
+                <div className="w-full h-full bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
+                  <Image
+                    src="/images/thumbnails5/soloElderly.jpg"
+                    alt="Feature 1"
+                    width={320}
+                    height={320}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* Card 2 */}
+              <div className="w-80 h-96 bg-white rounded-xl shadow-lg border-4 border-black overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10 relative transform rotate-2 -ml-4">
+                <div className="w-full h-full bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
+                  <Image
+                    src="/images/thumbnails5/duouncle.jpeg"
+                    alt="Feature 2"
+                    width={320}
+                    height={320}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* Card 3 */}
+              <div className="w-80 h-96 bg-white rounded-xl shadow-lg border-4 border-black overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10 relative transform -rotate-2 -ml-4">
+                <div className="w-full h-full bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center">
+                  <video
+                    className="w-full h-full object-cover scale-150"
+                    autoPlay
+                    loop
+                    muted
+                  >
+                    <source src="/images/thumbnails5/auntieplaying.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+
+              {/* Card 4 */}
+              <div className="w-80 h-96 bg-white rounded-xl shadow-lg border-4 border-black overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10 relative transform rotate-3 -ml-4">
+                <div className="w-full h-full bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center">
+                  <Image
+                    src="/images/thumbnails5/slimegameauntie.jpeg"
+                    alt="Feature 4"
+                    width={320}
+                    height={320}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* Card 5 */}
+              <div className="w-80 h-96 bg-white rounded-xl shadow-lg overflow-hidden border-4 border-black hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10 relative transform -rotate-4 -ml-4">
+                <div className="w-full h-full bg-gradient-to-br from-pink-100 to-pink-200 flex items-center justify-center">
+                  <Image
+                    src="/images/thumbnails5/soloElderly2.jpg"
+                    alt="Feature 5"
+                    width={320}
+                    height={320}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* Card 6 */}
+              <div className="w-80 h-96 bg-white rounded-xl shadow-lg border-4 border-black overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10 relative transform rotate-1 -ml-4">
+                <div className="w-full h-full bg-gradient-to-br from-yellow-100 to-yellow-200 flex items-center justify-center">
+                  <Image
+                    src="/images/redcross_uncle.jpg"
+                    alt="Feature 6"
+                    width={320}
+                    height={320}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* Card 7 */}
+              <div className="w-80 h-96 bg-white rounded-xl shadow-lg border-4 border-black overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 hover:z-10 relative transform -rotate-1 -ml-4">
+                <div className="w-full h-full bg-gradient-to-br from-teal-100 to-teal-200 flex items-center justify-center">
+                  <Image
+                    src="/images/playAnywhere.jpg"
+                    alt="Feature 7"
+                    width={320}
+                    height={320}
                     className="w-full h-full object-cover"
                   />
                 </div>
               </div>
             </div>
           </div>
-          {/* 
-          <div className="flex justify-center gap-4 mt-6">
-            <a
-              href="https://jianpinglim.itch.io/rehabify-play"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block"
-            >
-              <Button className="px-8 text-lg font-semibold">Download</Button>
-            </a>
-          </div> */}
         </div>
       </div>
+
+      {/* Our Partners Section */}
+      <div className="container mx-auto px-4 py-16 mb-8">
+        <p className="text-center text-gray-500 text-sm uppercase tracking-wider mb-2">Our Partners</p>
+        <h2 className="text-center text-3xl md:text-4xl font-bold mb-12">Trusted by Communities That Care</h2>
+        <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16">
+          <div className="flex flex-col items-center">
+            <Image
+              src="/images/logos/lb.png"
+              alt="Partner 1"
+              width={120}
+              height={70}
+              className="object-contain"
+            />
+          </div>
+          <div className="flex flex-col items-center">
+            <Image
+              src="/images/logos/thk.png"
+              alt="Partner 2"
+              width={180}
+              height={70}
+              className="object-contain"
+            />
+          </div>
+          <div className="flex flex-col items-center">
+            <Image
+              src="/images/logos/redcross.jpg"
+              alt="Partner 3"
+              width={140}
+              height={70}
+              className="object-contain"
+            />
+          </div>
+          <div className="flex flex-col items-center">
+            <Image
+              src="/images/logos/mkac.png"
+              alt="Partner 4"
+              width={140}
+              height={70}
+              className="object-contain"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* As Featured On Section */}
+      <div className="container mx-auto px-4 py-12 mb-8">
+        <p className="text-center text-gray-500 text-sm uppercase tracking-wider mb-8">As featured on</p>
+        <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16">
+          <div className="flex flex-col items-center">
+            <Image
+              src="/images/logos/cna938.png"
+              alt="CNA 938"
+              width={120}
+              height={60}
+            />
+          </div>
+          <div className="flex flex-col items-center">
+            <Image
+              src="/images/logos/businesstimes-thrive.png"
+              alt="Business Times Thrive"
+              width={150}
+              height={60}
+            />
+          </div>
+          <div className="flex flex-col items-center">
+            <Image
+              src="/images/logos/e27.png"
+              alt="CNA Today"
+              width={120}
+              height={60}
+            />
+          </div>
+          <div className="flex flex-col items-center">
+            <Image
+              src="/images/logos/sp.png"
+              alt="CNA Today"
+              width={120}
+              height={60}
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* At Rehabify Section */}
+      <div className="container mx-auto px-4 py-16 mb-8 max-w-4xl text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-6">At Rehabify</h2>
+        <p className="text-gray-600 text-lg md:text-xl leading-relaxed">
+          We aim to gamify physiotherapy exercises by transforming clinically informed movements into <span className="text-[#0015ff] font-bold text-xl md:text-2xl">Fun</span>, <span className="text-[#0015ff] font-bold text-xl md:text-2xl">Intuitive Games</span> that keep seniors <span className="text-[#0015ff] font-bold text-xl md:text-2xl">Motivated and Engaged</span>.
+        </p>
+      </div>
+
       {/* Start Moving Section */}
       <div className="grid md:grid-cols-2 gap-12 items-center mb-24 ml-12">
 
