@@ -316,11 +316,111 @@ export default function Home() {
       </div>
 
       {/* At Rehabify Section */}
-      <div className="container mx-auto px-4 py-16 mb-8 max-w-4xl text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">At Rehabify</h2>
-        <p className="text-gray-600 text-lg md:text-xl leading-relaxed">
-          We aim to gamify physiotherapy exercises by transforming clinically informed movements into <span className="text-[#0015ff] font-bold text-xl md:text-2xl">Fun</span>, <span className="text-[#0015ff] font-bold text-xl md:text-2xl">Intuitive Games</span> that keep seniors <span className="text-[#0015ff] font-bold text-xl md:text-2xl">Motivated and Engaged</span>.
+      <div className="container mx-auto px-4 py-16 mb-4 max-w-4xl text-center">
+        <h2 className="text-4xl md:text-5xl font-bold mb-6">At Rehabify</h2>
+        <p className="text-gray-600 text-lg md:text-3xl leading-relaxed">
+          We aim to gamify physiotherapy exercises by transforming clinically informed movements into <span className="text-[#0015ff] font-bold text-xl md:text-4xl">Fun</span>, <span className="text-[#0015ff] font-bold text-xl md:text-4xl">Intuitive Games</span> that keep seniors <span className="text-[#0015ff] font-bold text-xl md:text-4xl">Motivated and Engaged</span>.
         </p>
+      </div>
+
+      {/* Before Graphic Section */}
+      <div className="container mx-auto px-4 mb-4 text-center">
+        <div className="flex justify-center">
+          <Image
+            src="/images/before2.png"
+            alt="Before Graphic"
+            width={1200}
+            height={600}
+            className="object-contain max-w-full h-auto"
+          />
+        </div>
+      </div>
+
+      {/* Arrow Section */}
+      <div className="container mx-auto px-4 py-8 mb-6 text-center">
+        <div className="flex justify-center">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#0015ff]">
+            <path d="M12 4V20M5 13L12 20L19 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </div>
+      </div>
+
+      {/* After Section - 5 Cards */}
+      <div className="container mx-auto px-4 py-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 justify-items-center">
+          {/* Card 1 */}
+          <div className="w-64 h-80 bg-white rounded-xl shadow-lg border-4 border-black overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+            <div className="w-full h-full bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
+              <Image
+                    src="/images/legraise.png"
+                    alt="gamified leg raises"
+                    width={320}
+                    height={320}
+                    className="w-full h-full object-cover"
+                  />
+            </div>
+          </div>
+
+          {/* Card 2 */}
+          <div className="w-64 h-80 bg-white rounded-xl shadow-lg border-4 border-black overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+            <div className="w-full h-full bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
+              <video
+                className="w-full h-full object-cover"
+                autoPlay
+                loop
+                muted
+              >
+                <source src="/videos/armraise.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+
+          {/* Card 3 */}
+          <div className="w-64 h-80 bg-white rounded-xl shadow-lg border-4 border-black overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+            <div className="w-full h-full bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center">
+              <video
+                className="w-full h-full object-cover"
+                autoPlay
+                loop
+                muted
+              >
+                <source src="/videos/taichi.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+
+          {/* Card 4 */}
+          <div className="w-64 h-80 bg-white rounded-xl shadow-lg border-4 border-black overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+            <div className="w-full h-full bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center">
+              <video
+                className="w-full h-full object-cover"
+                autoPlay
+                loop
+                muted
+              >
+                <source src="/videos/sidestep.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+
+          {/* Card 5 */}
+          <div className="w-64 h-80 bg-white rounded-xl shadow-lg border-4 border-black overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+            <div className="w-full h-full bg-gradient-to-br from-pink-100 to-pink-200 flex items-center justify-center">
+              <video
+                className="w-full h-full object-cover"
+                autoPlay
+                loop
+                muted
+              >
+                <source src="/videos/squats.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Start Moving Section */}

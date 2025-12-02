@@ -6,7 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "Rehabify - Making Ageing Fun",
+  title: "Rehabify | Gamified Physiotherapy platform | Gamified way to exercise",
   description: "A playful and active approach to rehabilitation for seniors",
   generator: 'v0.dev',
   icons: {
