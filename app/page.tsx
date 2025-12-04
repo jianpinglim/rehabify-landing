@@ -317,9 +317,13 @@ export default function Home() {
 
       {/* At Rehabify Section */}
       <div className="container mx-auto px-4 py-16 mb-4 max-w-4xl text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6">At Rehabify</h2>
+        <h2 className="text-4xl md:text-5xl font-bold mb-6">What We Do!</h2>
         <p className="text-gray-600 text-lg md:text-3xl leading-relaxed">
-          We aim to gamify physiotherapy exercises by transforming clinically informed movements into <span className="text-[#0015ff] font-bold text-xl md:text-4xl">Fun</span>, <span className="text-[#0015ff] font-bold text-xl md:text-4xl">Intuitive Games</span> that keep seniors <span className="text-[#0015ff] font-bold text-xl md:text-4xl">Motivated and Engaged</span>.
+          Rehabify gamifies physiotherapy and active ageing exercises through engaging, motion-tracking games.
+        </p>
+        <br />
+        <p className="text-gray-600 text-lg md:text-3xl leading-relaxed">
+          Our platform uses evidence-based movements, designed with physiotherapists, to support strength, balance, coordination, and cognitive health, all through simple, camera-based gameplay.
         </p>
       </div>
 
@@ -418,6 +422,83 @@ export default function Home() {
                 <source src="/videos/squats.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Why It Works Section */}
+      <div className="container mx-auto px-4 py-16 mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold mb-12 pb-4 text-center">Why It Works</h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          {/* Left Image Panel - 1/3 */}
+          <div className="md:col-span-1 rounded-2xl overflow-hidden shadow-lg h-full">
+            <Image
+              src="/images/whyitworks.jpg"
+              alt="Why It Works"
+              width={300}
+              height={400}
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          {/* Right Panel - 2/3 with 3 stacked cards */}
+          <div className="md:col-span-2 flex flex-col gap-12 mt-2">
+            {/* Point 1 */}
+            <div className="bg-[#f2f2f2] rounded-2xl p-8 shadow-lg flex items-center gap-8">
+              <div className="shrink-0 w-32 h-32 overflow-hidden">
+                <Image
+                  src="/images/happyNur.png"
+                  alt="Happy senior"
+                  width={128}
+                  height={128}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <h3 className="text-2xl md:text-3xl font-bold mb-3">Movement feels fun, not forced<span className="text-[#0015FF] text-4xl font-black">.</span></h3>
+                <p className="text-gray-600 text-xl leading-relaxed">
+                  When exercise feels like a game, seniors stay engaged longer, smile more, and naturally move more.
+                </p>
+              </div>
+            </div>
+
+            {/* Point 2 */}
+            <div className="bg-[#f2f2f2] rounded-2xl p-8 shadow-lg flex items-center gap-8">
+              <div className="shrink-0 w-32 h-32 overflow-hidden">
+                <Image
+                  src="/images/happyTan.png"
+                  alt="Happy senior"
+                  width={128}
+                  height={128}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <h3 className="text-2xl md:text-3xl font-bold mb-3">Designed with physiotherapists<span className="text-[#0015FF] text-4xl font-black">.</span></h3>
+                <p className="text-gray-600 text-xl leading-relaxed">
+                  Every game is based on real exercises — from arm raises to balance and coordination — ensuring every movement is both meaningful and safe.
+                </p>
+              </div>
+            </div>
+
+            {/* Point 3 */}
+            <div className="bg-[#f2f2f2] rounded-2xl p-8 shadow-lg flex items-center gap-8">
+              <div className="shrink-0 w-32 h-32 overflow-hidden">
+                <Image
+                  src="/images/happyUnc.png"
+                  alt="Happy senior"
+                  width={128}
+                  height={128}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <h3 className="text-2xl md:text-3xl font-bold mb-3">Simple and accessible for all seniors<span className="text-[#0015FF] text-4xl font-black">.</span></h3>
+                <p className="text-gray-600 text-xl leading-relaxed">
+                  No wearables, no complicated equipment. Just a laptop camera. Seniors can start instantly, and centres save time.
+                </p>
+              </div>
             </div>
           </div>
         </div>
