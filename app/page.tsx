@@ -607,7 +607,7 @@ export default function Home() {
             No special devices needed—just a laptop.
           </p>
           <a
-            href="mailto:jianpinglim62@gmail.com"
+            href="mailto:hi@rehabify.co"
             className="inline-flex items-center"
           >
             <Button size="lg" className="px-10 py-6 text-lg font-semibold">
@@ -640,8 +640,8 @@ export default function Home() {
               {/* Increased heading size */}
               <p className="font-semibold text-lg mb-2">Contact Us</p>
               <div className="flex flex-col md:flex-row justify-center md:justify-center space-y-1 md:space-y-0 md:space-x-4"> {/* Stack vertically on small screens */}
-                <a href="mailto:jianpinglim62@gmail.com" className="hover:text-[#0015ff]">
-                  Jianpinglim62@gmail.com
+                <a href="mailto:hi@rehabify.co" className="hover:text-[#0015ff]">
+                  hi@rehabify.co
                 </a>
                 <a href="https://www.linkedin.com/in/jian-ping-lim" target="_blank" rel="noopener noreferrer" className="hover:text-[#0015ff]"> {/* Added https:// */}
                   LinkedIn
