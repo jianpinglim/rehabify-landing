@@ -7,7 +7,7 @@ import Link from "next/link"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white pt-14">
+    <main className="min-h-screen bg-white">
       {/* Reduced height of hero section and adjusted padding */}
       <div
         className="h-[80vh] flex items-center justify-center bg-white pb-14 relative overflow-hidden" // Increased height to 80vh
